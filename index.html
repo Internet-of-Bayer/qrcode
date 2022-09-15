@@ -74,7 +74,6 @@
     document.getElementById("resultado").innerHTML = resultado
  
     $(document).ready(function () {
-      $("#tendaName")(function(event){
         $.ajax({
           type: "GET",
           url: 'https://mwtt7f66g6.execute-api.eu-central-1.amazonaws.com/dev/dev?=' + resultado,
@@ -100,7 +99,6 @@
             document.write("Ops, voce precisa realizar o Check-in");
           }
         });
-      });
     });
   
    
