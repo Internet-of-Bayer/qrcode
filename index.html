@@ -1,5 +1,25 @@
+<!DOCTYPE html>
 <h1 style="text-align: center;">QR Code IT Truck</h1>
 
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Lampada Magica - Participantes</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <link rel='stylesheet' type='text/css' media='screen' href='participantes.css'>
+  <script src='participantes.js'></script>
+</head>
+<script src="botao.js"></script>
 <script src="html5-qrcode.min.js"></script>
 <style>
   .result{
@@ -12,16 +32,27 @@
   }
 </style>
 
-
-<div class="row">
-  <div class="col">
-    <div style="width:500px;" id="reader"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div style="width:500px;" id="reader"></div>
+      </div>
+      <div class="col" style="padding:30px">
+        <h4>Selecione sua tenda</h4>
+        <select name="select">
+          <option value= "tenda1">Digital Life</option>
+          <option value= "tenda2">IT Plus</option>
+          <option value= "tenda2">Jogos</option>
+        </select>
+      </div>
+      <div class="col" style="padding:30px;">
+        <h4>SCAN RESULT</h4>
+        <div id="result">Result Here</div>
+        <h5>Validar Visita</h5>
+        <td><button id="visita">Validar Checkin</button></td>
+      </div>
+    </div>
   </div>
-  <div class="col" style="padding:30px;">
-    <h4>SCAN RESULT</h4>
-    <div id="result">Result Here</div>
-  </div>
-</div>
 
 
 <script type="text/javascript">
@@ -38,3 +69,4 @@ var html5QrcodeScanner = new Html5QrcodeScanner(
 html5QrcodeScanner.render(onScanSuccess, onScanError);
 
 </script>
+</html>
