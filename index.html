@@ -68,7 +68,7 @@
 <script type="text/javascript">
   function onScanSuccess(qrCodeMessage) {
     document.getElementById('result').innerHTML = '<span class="result">' + qrCodeMessage + '</span>';
-    tendaName = document.getElementById(("tendaName").value).innerHTML;
+    tendName = document.getElementById("tendaName").value;
     resultado = JSON.stringify({ nome: qrCodeMessage, tenda:  tendaName});
     /*
       $(document).ready(function () {
