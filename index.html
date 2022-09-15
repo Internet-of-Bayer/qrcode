@@ -72,37 +72,37 @@
     var Message = document.getElementById('result')
     resultado = JSON.stringify({ nome: qrCodeMessage, tenda:  tendaName.value});
     document.getElementById("resultado").innerHTML = resultado
-    /*
-      $(document).ready(function () {
-        $("#tendaName").ready(function(event){
-          $.ajax({
-            type: "GET",
-            url: 'https://mwtt7f66g6.execute-api.eu-central-1.amazonaws.com/dev?=' + resultado,
-            contentType: 'application/json',
-            crossDomain: true,
-            processData: false,
-            dataType: "json",
-            data: '',
-            success: function (data) {
-              console.log(data);
+ 
+    $(document).ready(function () {
+      $("#tendaName")(function(event){
+        $.ajax({
+          type: "GET",
+          url: 'https://mwtt7f66g6.execute-api.eu-central-1.amazonaws.com/dev/dev?=' + resultado,
+          contentType: 'application/json',
+          crossDomain: true,
+          processData: false,
+          dataType: "json",
+          data: '',
+          success: function (data) {
+            console.log(data);
 
-              if (data.status == '200') // validação ok
-              {
-                document.write("Bem vindo, retire seu kit");
-              }
-              else if (data.status == '500') // validação errada
-              {
-                document.write("Bem vindo, novamente");
-              }
-
-            },
-            error: function (jqXHR, error, errorThrown) {
-              document.write("Ops, voce precisa realizar o Check-in");
+            if (data.status == '200') // validação ok
+            {
+              document.write("Bem vindo, retire seu kit");
             }
-          });
+            else if (data.status == '500') // validação errada
+            {
+              document.write("Bem vindo, novamente");
+            }
+
+          },
+          error: function (jqXHR, error, errorThrown) {
+            document.write("Ops, voce precisa realizar o Check-in");
+          }
         });
+      });
     });
-    */
+  
    
     
   }
