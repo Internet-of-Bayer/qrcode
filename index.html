@@ -28,6 +28,12 @@
     padding: 20px;
   }
 
+  .resultado{
+    background-color: blue;
+    color: #fff;
+    padding: 20px;
+  }
+
   .row {
     display: flex;
   }
@@ -51,8 +57,9 @@
     <div class="col" style="padding:30px;">
       <h4>SCAN RESULT</h4>
       <div id="result">Result Here</div>
+      <br>
       <h5>Validar Visitas</h5>
-      <td><button id="visita">Validar Checkin</button></td>
+      <td><div id="resultado">Validar Checkin</div></td>
     </div>
   </div>
 </div>
@@ -94,7 +101,7 @@
         });
     });
     */
-    document.getElementById('resultado').innerHTML = '<span class="result">' + qrCodeMessage + '</span>';
+    document.getElementById('resultado').innerHTML = '<span class="result">' + resultado + '</span>';
   }
 
 
