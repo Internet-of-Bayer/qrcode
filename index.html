@@ -68,8 +68,9 @@
 <script type="text/javascript">
   function onScanSuccess(qrCodeMessage) {
     document.getElementById('result').innerHTML = '<span class="result">' + qrCodeMessage + '</span>';
-    tendName = document.getElementById("tendaName").value;
-    resultado = JSON.stringify({ nome: qrCodeMessage, tenda:  tendaName});
+    var tendaName = document.getElementById('tendaName')
+    var Message = document.getElementById('result')
+    resultado = JSON.stringify({ nome: Message.value, tenda:  tendaName.value});
     /*
       $(document).ready(function () {
         $("#tendaName").ready(function(event){
@@ -101,7 +102,8 @@
         });
     });
     */
-    document.getElementById('resultado').innerHTML = '<span class="result">' + resultado + '</span>';
+   
+    document.write(resultado);
   }
 
 
