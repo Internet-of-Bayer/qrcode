@@ -63,11 +63,12 @@
     document.getElementById('result').innerHTML = '<span class="result">' + qrCodeMessage + '</span>';
     tendaName = document.getElementById('tendaName').innerHTML;
     resultado = JSON.stringify({ nome: qrCodeMessage, tenda:  tendaName});
+      /*
       $(document).ready(function () {
         $("#tendaName").ready(function(event){
           $.ajax({
             type: "GET",
-            url: 'https://mwtt7f66g6.execute-api.eu-central-1.amazonaws.com/dev?thingname=' + resultado,
+            url: 'https://mwtt7f66g6.execute-api.eu-central-1.amazonaws.com/dev?=' + resultado,
             contentType: 'application/json',
             crossDomain: true,
             processData: false,
@@ -91,8 +92,9 @@
             }
           });
         });
-
     });
+    */
+    document.getElementById('resultado').innerHTML = '<span class="result">' + qrCodeMessage + '</span>';
   }
 
 
