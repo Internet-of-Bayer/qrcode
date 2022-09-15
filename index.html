@@ -49,9 +49,9 @@
     <div class="col" style="padding:30px">
       <h4>Selecione sua tenda</h4>
       <select name="select" class="tenda" id="tendaName">
-        <option value="tenda1">Digital Life</option>
-        <option value="tenda2">IT Plus</option>
-        <option value="tenda2">Jogos</option>
+        <option value="Digital Life">Digital Life</option>
+        <option value="IT Plus">IT Plus</option>
+        <option value="Jogos">Jogos</option>
       </select>
     </div>
     <div class="col" style="padding:30px;">
@@ -71,6 +71,7 @@
     var tendaName = document.getElementById('tendaName')
     var Message = document.getElementById('result')
     resultado = JSON.stringify({ nome: Message.value, tenda:  tendaName.value});
+    document.getElementById("resultado").innerHTML = resultado
     /*
       $(document).ready(function () {
         $("#tendaName").ready(function(event){
@@ -103,7 +104,7 @@
     });
     */
    
-    document.write(resultado);
+    
   }
 
 
