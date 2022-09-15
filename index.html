@@ -72,7 +72,9 @@
     var Message = document.getElementById('result')
     resultado = JSON.stringify({ nome: qrCodeMessage, tenda:  tendaName.value});
     document.getElementById("resultado").innerHTML = resultado
-    $.ajax({
+  }
+
+  $.ajax({
         type: "GET",
         url: 'https://mwtt7f66g6.execute-api.eu-central-1.amazonaws.com/dev/dev?=' + resultado,
         contentType: 'application/json',
@@ -96,9 +98,6 @@
           document.getElementById("Ops, voce precisa realizar seu check-in").innerHTML = resultado
         }
       });
-   
-    
-  }
 
 
   function onScanError(errorMessage) {
