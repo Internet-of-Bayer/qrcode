@@ -81,22 +81,21 @@
           crossDomain: true,
           processData: false,
           dataType: "json",
-          data: '',
+          data: resultado,
           success: function (data) {
             console.log(data);
 
             if (data.status == '200') // validação ok
             {
-              document.write("Bem vindo, retire seu kit");
+              document.getElementById("Bem vindo, pode pegar seu kit").innerHTML = resultado
             }
             else if (data.status == '500') // validação errada
             {
-              document.write("Bem vindo, novamente");
+              document.getElementById("Bem vindo de volta").innerHTML = resultado
             }
-
           },
           error: function (jqXHR, error, errorThrown) {
-            document.write("Ops, voce precisa realizar o Check-in");
+            document.getElementById("Ops, voce precisa realizar seu check-in").innerHTML = resultado
           }
         });
     });
