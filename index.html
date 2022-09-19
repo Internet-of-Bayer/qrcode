@@ -72,14 +72,11 @@
     var Message = document.getElementById('result')
     resultado = JSON.stringify({ nome: qrCodeMessage, tenda:  tendaName.value});
     document.getElementById("resultado").innerHTML = resultado
-    const urlParams = new URLSearchParams(window.location.search);
-    urlParams.set(resultado);
-    var url = window.location.search = urlParams;
   }
 
   $.ajax({
         type: "GET",
-        url: 'https://mwtt7f66g6.execute-api.eu-central-1.amazonaws.com/dev/dev?=' + url,
+        url: 'https://mwtt7f66g6.execute-api.eu-central-1.amazonaws.com/dev/dev?nomeTenda=' + tendaName + '&qrcode='+qrCodeMessage,
         contentType: 'application/json',
         crossDomain: true,
         processData: false,
