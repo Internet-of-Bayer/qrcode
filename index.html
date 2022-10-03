@@ -49,7 +49,7 @@
     <div class="col" style="padding:30px">
       <h4>Selecione sua tenda</h4>
       <select name="select" class="tenda" id="tendaName">
-        <option value="Digital Life">Digital Life</option>
+        <option value="Digital Life">173</option>
         <option value="IT Plus">IT Plus</option>
         <option value="Jogos">Jogos</option>
       </select>
@@ -83,20 +83,16 @@
           dataType: "json",
           data: '',
           success: function (data) {
-          console.log(data);
+            console.log(data);
+            dados = data;
 
-          if (data.status == '200') // validação ok
-          {
-            document.getElementById("Bem vindo, pode pegar seu kit").innerHTML = resultado
-          }
-          else if (data.status == '500') // validação errada
-          {
-            document.getElementById("Bem vindo de volta").innerHTML = resultado
-          }
-
+            if (data.status == '200') // validação ok
+            {
+              console.log(data.status)
+            }
           },
           error: function (jqXHR, error, errorThrown) {
-            document.getElementById("Ops, voce precisa realizar seu check-in").innerHTML = resultado
+            dados = null;
           }
         });
     });
